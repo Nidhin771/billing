@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full screen body */
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at center, #001a12, #000);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Main Cyber Card */
+.container {
+  width: 92%;
+  max-width: 420px;
+  padding: 20px;
+  border-radius: 18px;
+  border: 2px solid #00ff4c;
+  background: rgba(0, 10, 5, 0.9);
+  box-shadow: 
+    0 0 15px #00ff4c,
+    0 0 30px rgba(0, 255, 76, 0.6);
+  text-align: center;
+  animation: glow 2s infinite alternate;
+}
+
+/* Glow animation */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #00ff4c;
+  }
+  to {
+    box-shadow: 0 0 30px #00ff4c;
+  }
+}
+
+/* Title */
+.container h2 {
+  color: #00ffff;
+  font-size: 22px;
+  margin-bottom: 6px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* Subtitle */
+.subtitle {
+  color: #00ff4c;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1.5px solid #00ff4c;
+  background: transparent;
+  color: #00ff4c;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0 0 10px rgba(0,255,76,0.5);
+}
+
+input::placeholder {
+  color: rgba(0,255,76,0.6);
+}
+
+/* Row for product, price, qty */
+.row {
+  display: flex;
+  gap: 6px;
+}
+
+.row input {
+  flex: 1;
+}
+
+/* Button */
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #00ff4c;
+  background: transparent;
+  color: #00ff4c;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00ff4c;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.15s ease;
+}
+
+/* Touch effect */
+button:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 25px #00ff4c;
+}
+
+/* Ripple */
+button span.ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background-color: rgba(0, 255, 76, 0.7);
+  width: 100px;
+  height: 100px;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Bill page text */
+p, h3 {
+  color: #00ff4c;
+  margin: 8px 0;
+  text-shadow: 0 0 6px #00ff4c;
+}
+
+/* Mobile extra optimization */
+@media (max-width: 480px) {
+  .container {
+    padding: 18px;
+  }
+
+  .container h2 {
+    font-size: 20px;
+  }
+
+  input, button {
+    font-size: 13px;
+  }
+}

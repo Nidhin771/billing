@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- For mobile full screen support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Generated Bill</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>🧾 BILL GENERATED</h2>
+
+    <p>Date: <span id="date"></span></p>
+    <p>Customer: <span id="cname"></span></p>
+    <p>Product: <span id="pname"></span></p>
+    <p>Price: ₹<span id="price"></span></p>
+    <p>Quantity: <span id="qty"></span></p>
+
+    <p>Total: ₹<span id="total"></span></p>
+    <p>GST (18%): ₹<span id="gst"></span></p>
+    <h3>Final Amount: ₹<span id="final"></span></h3>
+
+    <button onclick="goBack()">⬅ Back</button>
+</div>
+
+<script>
+/* Load data from localStorage and show on bill */
+document.getElementById("date").innerText = localStorage.getItem("date");
+document.getElementById("cname").innerText = localStorage.getItem("customer");
+document.getElementById("pname").innerText = localStorage.getItem("product");
+document.getElementById("price").innerText = localStorage.getItem("price");
+document.getElementById("qty").innerText = localStorage.getItem("qty");
+document.getElementById("total").innerText = localStorage.getItem("total");
+document.getElementById("gst").innerText = localStorage.getItem("gst");
+document.getElementById("final").innerText = localStorage.getItem("finalTotal");
+
+/* Back button */
+function goBack() {
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
+
