@@ -33,8 +33,6 @@ function goToBill() {
   localStorage.setItem("finalTotal", finalTotal.toFixed(2));
   localStorage.setItem("date", new Date().toLocaleDateString());
 
-  // Success message
-  alert("Bill Generated Successfully!");
 
   // Go to bill page
   window.location.href = "bill.html";
@@ -59,6 +57,7 @@ document.querySelectorAll("button").forEach(button => {
     }, 600);
   });
 });
+
 
 
 
