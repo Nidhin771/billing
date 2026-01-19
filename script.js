@@ -20,7 +20,7 @@ function goToBill() {
   let total = price * qty;
 
   // GST Calculation (18%)
-  let gst = total * 0.18;
+  let gst = total * 0.11;
   let finalTotal = total + gst;
 
   // Save data to localStorage
@@ -57,6 +57,7 @@ document.querySelectorAll("button").forEach(button => {
     }, 600);
   });
 });
+
 
 
 
